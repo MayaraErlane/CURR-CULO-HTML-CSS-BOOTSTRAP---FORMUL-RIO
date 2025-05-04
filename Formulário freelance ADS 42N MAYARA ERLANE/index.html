@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário de Freelancer</title>
+  <style>
+    fieldset {
+      width: 500px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 2px solid #555;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select,
+    input[type="file"],
+    input[type="time"],
+    input[type="date"] {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+    }
+
+    textarea {
+      height: 80px;
+      resize: none;
+    }
+
+    .small-note {
+      font-size: 0.8em;
+      color: #555;
+    }
+
+    .radio-group, .checkbox-group {
+      margin-top: 5px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      margin-top: 15px;
+      padding: 10px 15px;
+      font-weight: bold;
+    }
+
+    .required {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <form onsubmit="return validarFormulario()">
+    <fieldset>
+      <legend>Formulário de Freelancer</legend>
+
+      <label for="nome">Nome <span class="required">*</span></label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="sobrenome">Sobrenome <span class="required">*</span></label>
+      <input type="text" id="sobrenome" name="sobrenome" required>
+
+      <label for="telefone">Telefone <span class="required">*</span></label>
+      <input type="tel" id="telefone" name="telefone" pattern="\(\d{2}\)\d{5}-\d{4}" placeholder="(99)99999-9999" required>
+
+      <label for="email">E-mail <span class="required">*</span></label>
+      <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" required>
+
+      <label for="mensagem">Mensagem <span class="required">*</span></label>
+      <textarea id="mensagem" name="mensagem" required></textarea>
+
+      <label for="lingua">Língua</label>
+      <select id="lingua" name="lingua">
+        <option>Português (pt-br)</option>
+        <option>Inglês</option>
+        <option>Espanhol</option>
+        <option>Francês</option>
+      </select>
+
+      <label for="arquivo">Protótipo (Requisitos)</label>
+      <input type="file" id="arquivo" name="arquivo" accept=".pdf,.doc,.docx,.jpeg,.jpg,.png">
+
+      <label for="linguagens">As linguagens que você prefere?</label>
+      <select id="linguagens" name="linguagens[]" multiple size="5">
+        <option>Java</option>
+        <option>C</option>
+        <option>C++</option>
+        <option>PHP</option>
+        <option>Python</option>
+        <option>JavaScript</option>
+      </select>
+      <div class="small-note">(Para fazer várias escolhas, mantenha a tecla CTRL pressionada)</div>
+
+      <label>Banco de Dados</label>
+      <div class="radio-group">
+        <input type="radio" name="bd" value="MySQL" checked> MySQL
+        <input type="radio" name="bd" value="PostgreSQL"> PostgreSQL
+        <input type="radio" name="bd" value="MongoDB"> MongoDB
+        <input type="radio" name="bd" value="Outro"> Outro
+      </div>
+
+      <label>Turno para Reuniões <span class="required">*</span></label>
+      <div class="checkbox-group">
+        <input type="checkbox" name="turno" value="Manhã"> Manhã
+        <input type="checkbox" name="turno" value="Tarde"> Tarde
+        <input type="checkbox" name="turno" value="Noite"> Noite
+      </div>
+
+      <label for="horario">Horário Sugerido</label>
+      <input type="time" id="horario" name="horario">
+
+      <label for="data">Data Prevista de Entrega <span class="required">*</span></label>
+      <input type="date" id="data" name="data" required>
+
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Limpar">
+    </fieldset>
+  </form>
+
+  <script>
+    function validarFormulario() {
+      const nome = document.getElementById('nome').value.trim();
+      const sobrenome = document.getElementById('sobrenome').value.trim();
+      const telefone = document.getElementById('telefone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const mensagem = document.getElementById('mensagem').value.trim();
+      const data = document.getElementById('data').value;
+
+      if (!nome || !sobrenome || !telefone || !email || !mensagem || !data) {
+        alert("Por favor, preencha todos os campos obrigatórios.");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+
+</body>
+</html>

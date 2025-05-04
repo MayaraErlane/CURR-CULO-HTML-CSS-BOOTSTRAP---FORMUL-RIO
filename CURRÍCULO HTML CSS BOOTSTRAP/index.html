@@ -1,0 +1,182 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Mayara Holanda</title>
+    <link rel="icon" href="https://cdn-icons-png.freepik.com/512/6840/6840478.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <style>
+        :root {
+            --corBranca: #FFFFFF;
+            --corPreta: #000000;
+            --cor1: #F1EFEC;
+            --cor2: #D4C9BE;
+            --cor3: #0f230b;
+            --cor4: #030303;
+        }
+
+        body {
+            font-family: 'Trebuchet MS', sans-serif;
+            background-image: linear-gradient(115deg, var(--corBranca), var(--cor1), var(--cor2));
+            font-size: 1.1em;
+            padding-top: 80px;
+        }
+
+        header {
+            background-color: var(--cor3);
+            color: var(--cor1);
+            padding: 1em;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        section {
+            padding: 2em 0;
+            border-bottom: 1px solid var(--cor3);
+        }
+
+        h1, h2, h3 {
+            color: var(--cor3);
+        }
+
+        footer {
+            background-color: var(--cor3);
+            color: var(--cor1);
+            text-align: center;
+            padding: 1em;
+        }
+
+        .foto-retangular {
+            width: 180px;
+            height: auto;
+            border-radius: 8px;
+            opacity: 90%;
+        }
+
+        .info-contato {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .info-texto p {
+            margin: 0.2em 0;
+        }
+
+        a {
+            color: var(--corPreta);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-btn {
+            background-color: var(--cor2);
+            color: var(--cor3);
+            border: none;
+            font-weight: bold;
+        }
+
+        .nav-btn strong {
+            color: var(--cor3);
+        }
+
+        .nav-btn:hover {
+            background-color: #c4b7aa;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p style="font-size: 1.8em; font-weight: bold;">Mayara Erlane Medeiros de Barros Holanda</p>
+        <nav class="mt-3 d-flex flex-wrap justify-content-center gap-2">
+            <a class="btn nav-btn" href="#objetivo"><strong>Objetivo</strong></a>
+            <a class="btn nav-btn" href="#resumo"><strong>Resumo Profissional</strong></a>
+            <a class="btn nav-btn" href="#habilidades"><strong>Habilidades Técnicas</strong></a>
+            <a class="btn nav-btn" href="#educacao"><strong>Educação</strong></a>
+            <a class="btn nav-btn" href="#experiencia"><strong>Experiência Profissional</strong></a>
+            <a class="btn nav-btn" href="#projetos"><strong>Projetos Acadêmicos</strong></a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="info-contato">
+            <img class="foto-retangular" src="foto 3x4.jpeg" alt="Foto de Mayara Holanda">
+            <div class="info-texto">
+                <p><strong>Estudante de Análise e Desenvolvimento de Sistemas</strong></p>
+                <p>Email: mayaraerlane.arq@gmail.com | Telefone: (81) 99743-2624</p>
+                <p>Localização: Camaragibe - PE</p>
+                <a href="https://www.linkedin.com/in/seu-usuario" target="_blank">
+                    <img src="img/logo-linkedin-1024.png" alt="LinkedIn" height="40">
+                </a>
+                <a href="https://github.com/seu-usuario" target="_blank">
+                    <img src="img/gitHub.png" alt="GitHub" height="40">
+                </a>
+            </div>
+        </section>
+
+        <section id="objetivo">
+            <h2>Objetivo</h2>
+            <p>Estágio na área de Análise e Desenvolvimento de Sistemas, com foco em desenvolvimento Front-End e Banco de Dados.</p>
+        </section>
+
+        <section id="resumo">
+            <h2>Resumo Profissional</h2>
+            <p>Profissional em transição de carreira, com experiência em detalhamento e compatibilização de projetos. Atualmente cursando Análise e Desenvolvimento de Sistemas, desenvolvendo habilidades em tecnologias voltadas ao desenvolvimento web e gerenciamento de banco de dados.</p>
+        </section>
+
+        <section id="habilidades">
+            <h2>Habilidades Técnicas</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript, Figma</li>
+                <li>Banco de Dados: MySQL</li>
+                <li>Versionamento de Código: Git</li>
+                <li>AutoCAD, Promob, Revit</li>
+            </ul>
+        </section>
+
+        <section id="educacao">
+            <h2>Educação</h2>
+            <ul>
+                <li>Análise e Desenvolvimento de Sistemas - SENAC (2º período)</li>
+                <li>Póss-graduação em Master BIM - IPOG (2021 incompleta)</li>
+                <li>Arquitetura e Urbanismo - ESUDA (2018)</li>
+                <li>Técnico em Design de Interiores - SENAC (2009)</li>
+            </ul>
+        </section>
+
+        <section id="experiencia">
+            <h2>Experiência Profissional</h2>
+            <ul>
+                <li><strong>Arquiteta Colaboradora - Autônoma</strong>:Projetos de adequação para Vigilância Sanitária, Projetos Legais, levantamento métrico, compatibilização e detalhamento de projetos.</li>
+                <li><strong>Projetista - Italinea</strong>: Compatibilização e detalhamento de projetos de interiores (2018-2019)</li>
+                <li><strong>Projetista - Favorita</strong>: Compatibilização e detalhamento de projetos de móveis planejados (2014-2015)</li>
+                <li><strong>Projetista - New</strong>: Criação, Compatibilização e detalhamento de projetos(Mai 2012 – Out 2012)</li>
+                <li><strong>Projetista - Nova Interiores</strong>: Criação, compatibilização e detalhamento de projetos (Jan 2010 - Jul 2010)</li>
+                <li><strong>Projetista - Criare</strong> : Criação, compatibilização e detalhamento de projetos  (Out 2009 - Dez 2009 e Jan 2011 – Mai 2012)</li> 
+            </ul>
+        </section>
+
+        <section id="projetos">
+            <h2>Projetos Acadêmicos</h2>
+            <p><strong>Plataforma de Fidelização de Clientes</strong> Para a empresa Studio Mulungu: Desenvolvimento de interface intuitiva para um sistema de fidelização utilizando tecnologias web.</p>
+            <p><strong>Plataforma ShotCultural</strong>, com objetivo de torna cultura e turismo acessíveis com áudios descritivos de até 2 min. sobre pontos turísticos do Brasil. Com um mapa interativo, notifica usuários ao se aproximarem, permitindo ouvir histórias e explorar trilhas culturais, online ou offline. Ficou entre os dez primeiros no Demoday do Porto Digital 2024.</p>
+            p><strong>SustentArte</strong>, , plataforma é destinado a facilitar o descarte industrial de resíduos para servirem de matéria prima para produção de moda sustentável visando estimular o comercio local e a conscientização do descarte adequado do lixo.</p>
+    </section>
+    </main>
+
+    <footer>
+        Copyright &copy; 2025 Mayara Erlane M. B. Holanda. Todos os direitos reservados.
+    </footer>
+</body>
+
+</html>
